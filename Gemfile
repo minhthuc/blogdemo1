@@ -1,13 +1,16 @@
 source "https://rubygems.org"
 
-gem "rails", "~> 5.1.2"
-gem "sqlite3"
-gem "puma", "~> 3.7"
-gem "sass-rails", "~> 5.0"
-gem "uglifier", ">= 1.3.0"
 gem "coffee-rails", "~> 4.2"
-gem "turbolinks", "~> 5"
+gem "devise"
+gem "faker"
+gem "i18n"
 gem "jbuilder", "~> 2.5"
+gem "puma", "~> 3.7"
+gem "rails", "~> 5.1.2"
+gem "sass-rails", "~> 5.0"
+gem "sqlite3"
+gem "turbolinks", "~> 5"
+gem "uglifier", ">= 1.3.0"
 
 group :development, :test do
   gem "autoprefixer-rails"
@@ -15,6 +18,7 @@ group :development, :test do
   gem "brakeman", require: false
   gem "bundler-audit"
   gem "byebug", platform: :mri
+  gem "capybara"
   gem "database_cleaner"
   gem "eslint-rails", git: "https://github.com/octoberstorm/eslint-rails", require: false
   gem "factory_girl_rails"
@@ -29,6 +33,7 @@ group :development, :test do
   gem "rubocop", "~> 0.35.0", require: false
   gem "rubocop-checkstyle_formatter", require: false
   gem "scss_lint_reporter_checkstyle", require: false
+  gem "shoulda-matchers", "~> 3.0", require: false
 end
 
 group :development do
