@@ -1,0 +1,59 @@
+<div class="row nav-tabs nav-bar-custom">
+  <div class="col-lg-6">
+    <ul class="nav">
+      <% if user_signed_in? %>
+        <li class="nav-item">
+          <%= link_to (t "devise.hello", email: current_user.name ?
+            current_user.name : current_user.email), "#", class: "nav-link" %>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"
+             role="button" aria-haspopup="true" aria-expanded="false">
+            <%= t "devise.registrations.edit.update" %></a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#"><%= t "devise.passwords.edit.my_password_change" %></a>
+            <a class="dropdown-item" href="#"><%= t ".my_profile" %></a>
+            <%= link_to t(".sign_out"), main_app.destroy_user_session_path,
+              method: :delete, class:"dropdown-item" %>
+          </div>
+        </li>
+        <% if current_user.is_admin %>
+          <%= link_to t(".admin"), rails_admin_path, class: "nav-link" %>
+        <% end %>
+      <% else %>
+          <li class="nav-item">
+            <%= link_to t("devise.sessions.new.login"),
+              new_user_session_path, class: "nav-link" %>
+          </li>
+      <% end %>
+      <li class="nav-item">
+        <%= link_to t(".post"), posts_path, class: "nav-link"%>
+      </li>
+    </ul>
+  </div>
+  <div class="col-lg-6">
+    <ul class="nav search-path">
+      <li class="nav-item">
+        <input type="text" class="form-control">
+      </li>
+      <li class="nav-item">
+        <button class="button-search btn">
+          <%= t ".search" %>
+        </button>
+      </li>
+    </ul>
+
+  </div>
+</div>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-3"><%= t ".jumbo_heading" %></h1>
+    <p class="lead"><%= t ".jumbo_detail" %></p>
+    <hr class="my-2">
+    <p><%= t ".more" %></p>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="Jumbo action link"
+        role="button"><%= t "jumbo-action" %></a>
+    </p>
+  </div>
+</div>

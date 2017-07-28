@@ -1,5 +1,14 @@
 en:
-  users:
+  layouts:
+    header:
+      search: "Search"
+      my_profile: "My page"
+      post: "Post"
+      admin: "Admin"
+      sign_out: "Sign out"
+    footer:
+      my_blog: "My Blog"
+  devise:
     hello: "Hello %{email}!"
     confirmations:
       new:

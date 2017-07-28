@@ -1,0 +1,75 @@
+@import 'color';
+
+.nav-bar-custom {
+  background-color: $nav-bar-color;
+}
+
+.nav-item > .btn {
+  background-color: $nav-bar-color;
+  border: 1px solid $search-button-border-color;
+  color: $search-button-border-color;
+}
+
+.search-path {
+  float: right;
+}
+
+.nav-item > .btn:hover {
+  background-color: $search-button-border-color;
+  color: white;
+}
+
+.article {
+  background-repeat: no-repeat;
+  border: 1px solid $border-article;
+  float: left;
+  height: 500px !important;
+  margin: 1%;
+  overflow-x: visible;
+}
+
+.img-responsive {
+  height: 100px;
+  width: 100%;
+}
+
+.no-decoration {
+  text-decoration: none;
+}
+
+.item {
+  color: $block-title-color;
+  margin-top: 30px;
+  overflow: hidden;
+}
+
+.block-title {
+  color: $block-title-color;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.item-content-block {
+  background-color: $white;
+  border-top: 2px solid $white;
+  display: block;
+  padding: 20px;
+}
+
+.tags a {
+  background-color: $tag-background;
+  border-radius: 2px;
+  color: $white;
+  display: inline-block;
+  font-size: 11px;
+  line-height: 11px;
+  margin: 0 2px 5px;
+  padding: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.tags a:hover {
+  background-color: $tag-background-hover;
+}
