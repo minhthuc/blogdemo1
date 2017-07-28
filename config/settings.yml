@@ -1,4 +1,5 @@
 post:
   perpage: 6
+  length: 450
 user:
   avatar: 50
