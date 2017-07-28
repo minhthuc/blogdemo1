@@ -26,3 +26,4 @@ tmp/
 /.framgia-ci-result.temp.yml
 /config/secrets.yml
 /config/database.yml
+config/environments/*.local.yml
