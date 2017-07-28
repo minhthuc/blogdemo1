@@ -27,3 +27,4 @@ tmp/
 /config/secrets.yml
 /config/database.yml
 config/environments/*.local.yml
+config/application.yml
