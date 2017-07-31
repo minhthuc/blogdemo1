@@ -1,0 +1,15 @@
+<tr>
+  <td width="10%">
+    <%= load_user(comment).name %>
+  </td>
+  <td width="80%">
+    <%= comment.content %>
+  </td>
+  <td width="10%">
+  <% if correct_user comment %>
+    <%= link_to t("devise.registrations.edit.edit"), edit_post_comment_path(@post, comment) %>
+    <%= link_to t("devise.registrations.edit.destroy"), post_comment_path(@post, comment), method: :delete,
+      confirm: t("devise.registrations.edit.sure") %>
+  <% end %>
+  </td>
+</tr>

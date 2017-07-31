@@ -1,3 +1,4 @@
+
 Rails.application.configure do
   config.cache_classes = false
 
@@ -31,4 +32,16 @@ Rails.application.configure do
   config.assets.quiet = true
   config.action_mailer.perform_deliveries = true
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+  config.action_mailer.default_url_options = {host: "localhost:3000"}
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+      address: "smtp.gmail.com",
+      domain: "gmail.com",
+      port: 587,
+      user_name: "minhthuc2209@gmail.com",
+      password: "mypassword123456",
+      authentication: "login",
+      enable_starttls_auto: true
+  }
+  require "carrierwave/orm/activerecord"
 end

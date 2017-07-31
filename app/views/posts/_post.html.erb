@@ -1,8 +1,11 @@
 <div class="col-lg-5 article ">
   <div class="row tag">
     <div class="item-content-block tags">
-      <a href="#"><%= t "add-tag-here" %></a>
-      <%= image_tag Faker::LoremPixel.image("300x300"), class:"img-responsive" %>
+      <% if post.tags.any? %>
+        <% post.tags.each do |f| %>
+          <%= link_to f.name, "#" %>
+        <% end %>
+      <% end %>
     </div>
   </div>
   <div class ="row">

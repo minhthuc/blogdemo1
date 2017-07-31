@@ -49,8 +49,12 @@ en:
       new:
         forgot: "Forgot your password?"
         send: "Send me reset password instructions"
+        comment: "Comment"
     registrations:
       edit:
+        edit: "Edit"
+        destroy: "destroy"
+        editpost: "Edit Post"
         header: "Edit %{name}"
         waiting_confirm: "Currently waiting confirmation for: %{email}"
         leave_blank: "(leave blank if you don't want to change it)"
@@ -74,3 +78,12 @@ en:
     unlocks:
       new:
         resend_unlock: "Resend unlock instructions"
+    post:
+      post_created: "Post was successfully created."
+      post_updated: "Post was successfully updated."
+      post_destroy: "Post was successfully destroyed."
+    comment:
+      commented: "Commented"
+      edited: "Edited"
+      deleted: "Comment deleted"
+      opp: "Opp! sorry"

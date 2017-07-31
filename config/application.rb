@@ -1,6 +1,8 @@
 require_relative "boot"
 require "rails/all"
 Bundler.require(*Rails.groups)
+require "carrierwave"
+require "carrierwave/orm/activerecord"
 
 module BL
   class Application < Rails::Application
