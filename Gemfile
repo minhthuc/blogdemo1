@@ -2,6 +2,7 @@ source "https://rubygems.org"
 
 gem "bootstrap", git: "https://github.com/twbs/bootstrap-rubygem"
 gem "bootstrap-sass"
+gem "carrierwave", "~> 1.0"
 gem "coffee-rails", "~> 4.2"
 gem "config"
 gem "devise"

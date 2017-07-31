@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+  <table class="table table-striped">
+    <tr>
+      <td>
+        <%= @post.title %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= @post.content %>
+      </td>
+    </tr>
+  </table>
+
+<% if correct_user @post %>
+  <%= link_to t("devise.registrations.edit.edit"), edit_post_path(@post) %> |
+  <%= link_to t("devise.registrations.edit.back"), posts_path %>
+<% end %>
+<table class="table-striped table">
+    <%= render @comments %>
+</table>
+<%= render "comments/form", post: @post, comment: @comment %>
+</div>

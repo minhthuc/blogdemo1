@@ -1,0 +1,24 @@
+<div class="container">
+  <%= form_for post, local: true do |form| %>
+    <% if post.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+        <ul>
+          <% post.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <%= form.text_field :title, class: "form-control", placeholder: "Tỉtle" %>
+    <%= form.text_field :tag_list, class: "form-control", placeholder: "Tag
+  list" %>
+    <%= form.text_area :content, class: "form-control", placeholder: "Content" %>
+    <%= form.file_field :picture, class: "btn btn-warning", placeholder:
+      "Title" %>
+    <div class="actions">
+      <%= form.submit "Create", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>
