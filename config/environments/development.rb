@@ -29,7 +29,6 @@ Rails.application.configure do
   config.assets.debug = true
 
   config.assets.quiet = true
-
-
+  config.action_mailer.perform_deliveries = true
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 end
