@@ -1,13 +1,19 @@
-<div class="container">
-  <div class="row">
-    <div class="col-lg-12">
-      <%= render @posts %>
+<div class="intro">
+  <div class="container">
+    <div class="units-row">
+      <div class="unit-10">
+        <%= image_tag("avatar.png", class: "img-intro")  %>
+      </div>
+      <div class="unit-90">
+        <p class="p-intro">Hello, I’m Intern. I’m proud to be a part of milky
+          way.</p>
+      </div>
     </div>
   </div>
-
-  <div class="row ">
-    <%= paginate @posts %>
+</div>
+<div class="content">
+  <div class="container">
+    <%= render @posts %>
   </div>
 </div>
-
-<%= link_to "New Post", new_post_path %>
+<%= paginate @posts %>
